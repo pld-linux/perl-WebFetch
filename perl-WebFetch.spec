@@ -9,7 +9,8 @@ Summary(pl):	WebFetch - modu³ Perla do ¶ci±gania i zapisywania informacji z WWW
 Name:		perl-WebFetch
 Version:	0.10
 Release:	5
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/I/IK/IKLUFT/%{pdir}-%{version}.tar.gz
 # Source0-md5:	5632d7c0d3240444ba54523e5ea81a5c
