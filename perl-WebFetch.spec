@@ -8,7 +8,7 @@ Summary:	WebFetch - Perl module to download and save information from the Web
 Summary(pl):	WebFetch - modu³ Perla do ¶ci±gania i zapisywania informacji z WWW
 Name:		perl-WebFetch
 Version:	0.10
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-authors/id/I/IK/IKLUFT/%{pdir}-%{version}.tar.gz
@@ -55,6 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{perl_sitelib}/*.pm
 %{perl_sitelib}/WebFetch
-# autosplit.ix files
-%{perl_sitelib}/auto/WebFetch
+# empty autosplit.ix files
+#%{perl_sitelib}/auto/WebFetch
 %{_mandir}/man3/*
