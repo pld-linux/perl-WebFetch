@@ -12,6 +12,7 @@ Release:	5
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/I/IK/IKLUFT/%{pdir}-%{version}.tar.gz
+# Source0-md5:	5632d7c0d3240444ba54523e5ea81a5c
 BuildRequires:	perl-devel >= 5.6
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl(Locale::Country)
