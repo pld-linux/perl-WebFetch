@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	WebFetch
@@ -14,7 +14,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/I/IK/IKLUFT/%{pdir}-%{version}.tar.gz
 # Source0-md5:	5632d7c0d3240444ba54523e5ea81a5c
 BuildRequires:	perl-devel >= 5.6
-%if %{?_without_tests:0}%{!?_without_tests:1}
+%if %{with tests}
 BuildRequires:	perl(Locale::Country)
 BuildRequires:	perl-Date-Calc
 BuildRequires:	perl-HTML-Parser
@@ -43,12 +43,14 @@ lub eksportu informacji na inne serwisy internetowe.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
-%{!?_without_tests:%{__make} test}
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
