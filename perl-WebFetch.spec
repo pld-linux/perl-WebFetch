@@ -1,13 +1,14 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	WebFetch
 Summary:	WebFetch - Perl module to download and save information from the Web
 Summary(pl):	WebFetch - modu³ Perla do ¶ci±gania i zapisywania informacji z WWW
 Name:		perl-WebFetch
 Version:	0.10
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-authors/id/I/IK/IKLUFT/%{pdir}-%{version}.tar.gz
@@ -53,6 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{perl_sitelib}/*.pm
-%{perl_sitelib}/%{pdir}
-#%{perl_sitelib}/auto/%{pdir}
+%{perl_sitelib}/WebFetch
+# autosplit.ix files
+%{perl_sitelib}/auto/WebFetch
 %{_mandir}/man3/*
