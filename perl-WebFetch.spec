@@ -3,7 +3,7 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	WebFetch
+%define		pdir	WebFetch
 Summary:	WebFetch - Perl module to download and save information from the Web
 Summary(pl):	WebFetch - modu³ Perla do ¶ci±gania i zapisywania informacji z WWW
 Name:		perl-WebFetch
