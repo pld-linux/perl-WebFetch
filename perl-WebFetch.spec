@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	WebFetch
 Summary:	WebFetch - Perl module to download and save information from the Web
-Summary(pl):	WebFetch - modu≥ Perla do ∂ci±gania i zapisywania informacji z WWW
+Summary(pl.UTF-8):   WebFetch - modu≈Ç Perla do ≈õciƒÖgania i zapisywania informacji z WWW
 Name:		perl-WebFetch
 Version:	0.10
 Release:	6
@@ -32,9 +32,9 @@ from various sources around the Internet or the local system in order
 to present them for display, or to export local information to other
 sites on the Internet.
 
-%description -l pl
-Modu≥ WebFetch - infrastruktura do ∂ci±gania informacji z rÛønych
-ºrÛde≥ w ca≥ym Internecie lub z lokalnego systemu w celu wy∂wietlenia
+%description -l pl.UTF-8
+Modu≈Ç WebFetch - infrastruktura do ≈õciƒÖgania informacji z r√≥≈ºnych
+≈∫r√≥de≈Ç w ca≈Çym Internecie lub z lokalnego systemu w celu wy≈õwietlenia
 lub eksportu informacji na inne serwisy internetowe.
 
 %prep
