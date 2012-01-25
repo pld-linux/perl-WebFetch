@@ -8,7 +8,7 @@ Summary:	WebFetch - Perl module to download and save information from the Web
 Summary(pl.UTF-8):	WebFetch - moduł Perla do ściągania i zapisywania informacji z WWW
 Name:		perl-WebFetch
 Version:	0.13
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -19,12 +19,13 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl(Locale::Country)
 BuildRequires:	perl-Class-ISA
 BuildRequires:	perl-Date-Calc
-BuildRequires:	perl-HTML-Parser
-BuildRequires:	perl-XML-Parser
-BuildRequires:	perl-libwww
 BuildRequires:	perl-Exception-Class
+BuildRequires:	perl-HTML-Parser
+BuildRequires:	perl-Template-Plugin-XML-XPath
+BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-XML-Atom
 BuildRequires:	perl-XML-RSS
+BuildRequires:	perl-libwww
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
