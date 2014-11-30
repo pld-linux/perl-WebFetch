@@ -1,9 +1,9 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	WebFetch
+%include	/usr/lib/rpm/macros.perl
 Summary:	WebFetch - Perl module to download and save information from the Web
 Summary(pl.UTF-8):	WebFetch - moduł Perla do ściągania i zapisywania informacji z WWW
 Name:		perl-WebFetch
@@ -14,7 +14,9 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/I/IK/IKLUFT/%{pdir}-%{version}.tar.gz
 # Source0-md5:	c06a23ec6f9762d92c3510c685b1112e
+URL:		http://search.cpan.org/dist/WebFetch/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl(Locale::Country)
 BuildRequires:	perl-Class-ISA
@@ -24,12 +26,11 @@ BuildRequires:	perl-Exception-Class
 BuildRequires:	perl-HTML-Parser
 BuildRequires:	perl-Template-Plugin-XML-XPath
 BuildRequires:	perl-Test-Pod-Coverage
-BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-XML-Atom
+BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-XML-RSS
 BuildRequires:	perl-libwww
 %endif
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
